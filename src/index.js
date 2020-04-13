@@ -8,7 +8,8 @@ const app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-require('../controllers/althController.js')(app);
+require('./controllers/althController.js')(app);
+require('./controllers/protectController.js')(app);
 
 
 app.listen(3000)
